@@ -23,6 +23,6 @@
 
 ## PS
 
-- [백준 풀이](https://github.com/jeonghobak/GoBackToWhiteBelt/tree/main/PS/BOJ)
+- [백준 풀이](https://github.com/jeonghobak/GoBackToWhiteBelt/tree/main/PS)
 - 
 
