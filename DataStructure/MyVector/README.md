@@ -188,7 +188,7 @@ auto push_back( T&& data ) -> void
 
 ### Result
 
-![](/unittest_result.png)
+![unittest_result](.\unittest_result.png)
 
 # Reference
 
