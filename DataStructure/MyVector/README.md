@@ -176,8 +176,8 @@ auto push_back( T&& data ) -> void
 
 ### Unit Test List & Result
 ![unittest_result](./unittest_result.png)
-1. **MY_VECTOR_01**: [기본 타입] 지정된 개수의 초기값을 가진 `int` 객체들이 정상적으로 생성되는지 확인.
-2. **MY_VECTOR_02**: [사용자 정의 타입] 지정된 개수의 `SimpleStruct` 객체들이 정상적으로 생성되는지 검증.
+1. **MY_VECTOR_01**: 지정된 개수의 초기값을 가진 `int` 객체들이 정상적으로 생성되는지 확인.
+2. **MY_VECTOR_02**: 지정된 개수의 `SimpleStruct` 객체들이 정상적으로 생성되는지 검증.
 3. **MY_VECTOR_03**: 매개변수 없이 `MyVector<int>` 객체 생성 시 크기가 0인지 테스트.
 4. **MY_VECTOR_04**: `SimpleStruct` 타입을 사용하는 `MyVector`의 복사 생성자가 정상 작동하는지 확인.
 5. **MY_VECTOR_05**: `SimpleStruct` 타입 `MyVector`의 이동 생성자가 정상적으로 작동하는지 검사.
