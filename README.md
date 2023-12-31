@@ -15,7 +15,7 @@
 
 ## Data Structure
 
-1. 업데이트 중.
+1. [동적 배열(MyVector) 구현](https://github.com/jeonghobak/GoBackToWhiteBelt/tree/main/DataStructure/MyVector)
 
 
 
