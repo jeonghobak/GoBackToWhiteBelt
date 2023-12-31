@@ -140,13 +140,15 @@ Unit test 돌리기 전 까지는, 위와 같이 push_back 을 구현했었고, 
 
 원인은 allocator 로 할당한 메모리를 사용하는 부분에 있었다.('나도 아직 멀었네...').
 
-allocator 를 이용해 할당한 메모리 공간은 말 그대로 공간 만 존재하고 미 초기화 상태, 즉 유효 데이터(객체)가 존재하는 상태가 아니다. ('미 초기화 된 변수를 사용하는 느낌으로 보면 되며, new 호출과의 차이점이기도 하다')
+allocator 를 이용해 할당한 메모리 공간은 말 그대로 공간 만 존재하고 미 초기화 상태, 즉 유효 데이터(객체)가 존재하는 상태가 아니다.
+('미 초기화 된 변수를 사용하는 느낌으로 보면 되며, new 호출과의 차이점이기도 하다')
 
-유효 객체가 존재하지 않는 공간에 복사 또는 이동 배정 연산을 시도 했으니 에러가 날 만도 하다.
+유효 객체가 없는 상태에서 복사 또는 이동 배정 연산을 시도 했으니 에러가 날 만도 하다.
 
 솔루션은 메모리에 객체가 존재하는 상태가 아니니, 지정한 메모리 위치에 객체가 복사 또는 이동 생성자를 통해 생성되게 만들면 된다, 즉 placement new가 호출되게 만들면 된다.
 
-[std::vector](https://github.com/microsoft/STL/blob/main/stl/inc/vector)도 잘 살펴 보면, push_back 연산이 emplace_back 을 통해(생성자 호출을 통해) 데이터를 추가하고 있음을 알 수 있다.(emplace_back 자체가 생성자 호출이고, 생성자 호출 때 객체를 던지게 되면 l-value, r-value 에 따라 복사 또는 이동 생성자가 호출 됨. )
+[std::vector](https://github.com/microsoft/STL/blob/main/stl/inc/vector)도 잘 살펴 보면, push_back 연산이 emplace_back 을 통해(생성자 호출을 통해) 데이터를 추가하고 있음을 알 수 있다.
+(emplace_back 자체가 생성자 호출이고, 생성자 호출 때 객체를 던지게 되면 l-value, r-value 에 따라 복사 또는 이동 생성자가 호출 됨. )
 
 이를 토대로 구현한 코드는 아래와 같다.
 
@@ -171,7 +173,6 @@ auto push_back( T&& data ) -> void
     emplace_back( std::forward<T>( data ) );
 }
 ```
-
 
 
 ### Unit Test List
