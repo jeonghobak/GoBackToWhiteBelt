@@ -174,7 +174,7 @@ auto push_back( T&& data ) -> void
 
 
 
-# Unit Test List & Result
+### Unit Test List & Result
 ![unittest_result](./unittest_result.png)
 1. **MY_VECTOR_01**: [기본 타입] 지정된 개수의 초기값을 가진 `int` 객체들이 정상적으로 생성되는지 확인.
 2. **MY_VECTOR_02**: [사용자 정의 타입] 지정된 개수의 `SimpleStruct` 객체들이 정상적으로 생성되는지 검증.
