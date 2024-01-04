@@ -21,6 +21,6 @@
 
 ## PS
 
-- [알고리즘 풀이](https://github.com/jeonghobak/GoBackToWhiteBelt/tree/main/PS)
+- [problem solving](https://github.com/jeonghobak/GoBackToWhiteBelt/tree/main/PS)
   
 
