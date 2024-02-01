@@ -17,9 +17,5 @@
 1. [동적 배열(MyVector) 구현](https://github.com/jeonghobak/GoBackToWhiteBelt/tree/main/DataStructure/MyVector)
 
 
-
-## PS
-
-- [problem solving](https://github.com/jeonghobak/GoBackToWhiteBelt/tree/main/PS)
   
 
